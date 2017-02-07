@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM java:openjdk-8-jre-alpine
 MAINTAINER "Bart Bania" <contact@bartbania.com>
 
 RUN apk add --update curl bash && \
