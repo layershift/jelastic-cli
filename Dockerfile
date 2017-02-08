@@ -1,5 +1,5 @@
 FROM java:openjdk-8-jre-alpine
-MAINTAINER "Bart Bania" <contact@bartbania.com>
+MAINTAINER "Layershift Jelastic Paas" <jelastic@layershift.com>
 
 RUN apk add --update curl bash && \
     rm -rf /var/cache/apk/*
