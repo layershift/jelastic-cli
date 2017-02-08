@@ -2,7 +2,7 @@
 
 [Jelastic CLI](https://docs.jelastic.com/cli) in a container. No need to install Java libraries directly on your system.
 
-The image weighs about 190MB and provides full Jelastic CLI functionality.
+The image weighs about 160MB and provides full Jelastic CLI functionality.
 
 ### Docker image
 
@@ -25,7 +25,7 @@ To run the container, specify the following variables:
 * `J_PASSWORD` - your Jelastic password
 * `J_PLATFORM` - app.j.layershift.co.uk
 
-Run the image with:
+Run the image interactively with:
 
 ```
 docker run -it --rm \
@@ -34,4 +34,15 @@ docker run -it --rm \
   -e "J_PLATFORM=app.j.layershift.co.uk" \
 layershift/jelastic-cli
 ```
+
+or concatenate commands such as
+
+```
+docker run -it --rm \
+  -e "J_LOGIN=you@domain.com" \
+  -e "J_PASSWORD=password" \
+  -e "J_PLATFORM=app.j.layershift.co.uk" \
+layershift/jelastic-cli "/root/jelastic/environment/control/startenv --silent true --envName my-environment-name"
+```
+
 
