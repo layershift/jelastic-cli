@@ -44,5 +44,7 @@ docker run -it --rm \
   -e "J_PLATFORM=app.j.layershift.co.uk" \
 layershift/jelastic-cli "/root/jelastic/environment/control/startenv --silent true --envName my-environment-name"
 ```
+# LICENSE
 
+Licensed under GNU LGPLv3
 
