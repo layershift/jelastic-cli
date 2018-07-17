@@ -1,7 +1,7 @@
 FROM java:openjdk-8-jre-alpine
 MAINTAINER "Layershift" <jelastic@layershift.com>
 
-RUN apk add --update curl bash && \
+RUN apk add --update curl bash jq && \
     rm -rf /var/cache/apk/*
 
 WORKDIR /root
